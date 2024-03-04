@@ -12,6 +12,8 @@ jobs:
       # Uso de mi "Custom Action"
       - name: Load & Cache Dependencies
         uses: ./.github/actions/cached-deps
+        with:
+          caching: 'false'
       - name: Lint code
         run: npm run lint
   test:
