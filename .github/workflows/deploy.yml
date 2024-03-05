@@ -70,5 +70,8 @@ jobs:
   information:
     runs-on: ubuntu-latest
     steps:
+      # Hacemos un checkout para asegurarnos que el código de mi custom action se encuentre disponible cuando lo necesite
+      - name: Get code
+        uses: actions/checkout@v3
       - name: Run custom JavaScript action
         uses: ./.github/actions/deploy-s3-javascript
